@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Classifier - DL Classification App{% endblock %}
+
+{% block content %}
+
+<div class="classifier-container">
+
+    <h2>Image Classifier</h2>
+
+    <div class="upload-section">
+
+        <div class="upload-box">
+
+            <input
+                type="file"
+                id="file-input"
+                accept="image/*"
+            >
+
+            <label for="file-input">
+                Choose an image
+            </label>
+
+        </div>
+
+        <div id="preview-container" style="display:none; margin-top:20px;">
+            <img
+                id="image-preview"
+                src=""
+                alt="Selected image"
+                style="max-width:300px; max-height:300px; border-radius:10px;"
+            >
+        </div>
+
+        <button
+            type="button"
+            class="btn-primary"
+            id="classify-btn"
+
+        >
+            Classify Image
+        </button>
+
+    </div>
+
+
+    <!-- Loading message -->
+
+    <div
+        id="loading"
+        style="display:none; margin-top:20px;"
+    >
+        <p>🔄 Analyzing image...</p>
+    </div>
+
+
+    <!-- Results -->
+
+    <div
+        class="results-section"
+        id="results"
+    >
+
+        <h3>Classification Results</h3>
+
+        <p id="result-message">
+            Results will appear here
+        </p>
+
+        <div id="result-details"></div>
+
+    </div>
+
+
+    <div class="back-button">
+
+        <a
+            href="/"
+            class="btn-secondary"
+        >
+            Back to Home
+        </a>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - DL Classification App{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h2>Dashboard</h2>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Classifications</h3>
+            <p class="stat-number">0</p>
+        </div>
+        
+        <div class="stat-card">
+            <h3>Models Loaded</h3>
+            <p class="stat-number">1</p>
+        </div>
+        
+        <div class="stat-card">
+            <h3>Accuracy Rate</h3>
+            <p class="stat-number">0%</p>
+        </div>
+        
+        <div class="stat-card">
+            <h3>Active Users</h3>
+            <p class="stat-number">0</p>
+        </div>
+    </div>
+    
+    <div class="charts-section">
+        <h3>Classification Distribution</h3>
+        <p>Charts and analytics will be displayed here</p>
+    </div>
+    
+    <div class="back-button">
+        <a href="/" class="btn-secondary">Back to Home</a>
+    </div>
+</div>
+{% endblock %}

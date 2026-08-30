@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Home - DL Classification App{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h2>Welcome to Deep Learning Classification App</h2>
+    <p>Classify images into different categories using deep learning models.</p>
+    
+    <div class="classifiers-grid">
+        <div class="classifier-card">
+            <h3>Fruit Classification</h3>
+            <p>Identify different types of fruits</p>
+            <a href="/classifier?type=fruit">Go to Classifier</a>
+        </div>
+        
+        <div class="classifier-card">
+            <h3>Flower Classification</h3>
+            <p>Identify different types of flowers</p>
+            <span class="coming-soon">Flower model is not uploaded yet.</span>
+        </div>
+        
+        <div class="classifier-card">
+            <h3>Animal Classification</h3>
+            <p>Identify different types of animals</p>
+            <span class="coming-soon">Animal model is not uploaded yet.</span>
+        </div>
+        
+        <div class="classifier-card">
+            <h3>Letter Classification</h3>
+            <p>Recognize handwritten letters</p>
+            <span class="coming-soon">Letter model is not uploaded yet.</span>
+        </div>
+        
+        <div class="classifier-card">
+            <h3>Traffic Sign Classification</h3>
+            <p>Identify traffic signs</p>
+            <span class="coming-soon">Traffic sign model is not uploaded yet.</span>
+        </div>
+        
+        <div class="classifier-card">
+            <h3>Waste Classification</h3>
+            <p>Classify waste materials</p>
+            <span class="coming-soon">Waste model is not uploaded yet.</span>
+        </div>
+    </div>
+    
+    <div class="info-section">
+        <a href="/dashboard" class="btn-primary">View Dashboard</a>
+    </div>
+</div>
+{% endblock %}
